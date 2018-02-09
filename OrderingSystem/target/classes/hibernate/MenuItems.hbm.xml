@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+
+<hibernate-mapping>  
+<class name="com.orderingsystem.model.MenuItem" table="menu_items"> 
+		<composite-id >
+			<key-property name="id" column="menu_item_id"/>
+      		<key-property name="menuId" column="menu_id" />
+      		<key-property name="restaurantId" column="restaurant_id"/>
+    		</composite-id> 
+          <property name="name" type="string" column="name"></property> 
+          <property name="price" type="float" column="price"></property>
+</class>  
+            
+</hibernate-mapping>
